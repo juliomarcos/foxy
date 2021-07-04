@@ -4,9 +4,9 @@ import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 export default {
-  serverMiddleware: [
-    { path: "/api", handler: "~/api/rest.js" },
-  ],
+  // serverMiddleware: [
+  //   { path: "/api", handler: "~/api/rest.js" },
+  // ],
   target: 'static',
   components: true,
   generate: {

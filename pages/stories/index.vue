@@ -1,5 +1,5 @@
 <template>
-  <code>{{ stories }}</code>
+  <code v-html="stories"></code>
 </template>
 
 <script>
