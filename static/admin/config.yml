@@ -80,3 +80,44 @@ collections:
           summary: '{{fields.image}}',
           field: { label: 'Image', name: 'image', widget: 'image' },
         }
+  - name: 'stories'
+    label: 'Histórias'
+    label_singular: 'História'
+    folder: 'content/stories'
+    create: true
+    format: 'json'
+    slug: '{{slug}}'
+    fields:
+      - {
+          label: 'Título',
+          name: 'title',
+          widget: 'string',
+          required: true,
+        }
+      - {
+          label: 'Subtítulo',
+          name: 'subtitle',
+          widget: 'string',
+          required: true,
+        }
+      - { 
+          label: 'Imagem de Capa', 
+          name: 'capa', 
+          widget: 'image', 
+          required: true, 
+          allow_multiple: false,
+        }
+      - {
+          label: 'Corpo',
+          name: 'body',
+          widget: 'markdown',
+          required: true,
+        }
+      - {
+        label: 'Ilustrações',
+        name: 'illustrations',
+        widget: 'list',
+        required: false,
+        summary: '{{fields.image}}',
+        field: { label: 'Imagem', name: 'image', widget: 'image' },
+      }

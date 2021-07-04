@@ -4,6 +4,9 @@ import * as SITE_INFO from './content/site/info.json'
 import { COLOR_MODE_FALLBACK } from './utils/globals.js'
 
 export default {
+  serverMiddleware: [
+    { path: "/api", handler: "~/api/rest.js" },
+  ],
   target: 'static',
   components: true,
   generate: {
@@ -96,7 +99,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   },
   /*
    ** Custom additions configuration
